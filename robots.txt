@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://liange-onomichi.com/liange/sitemap/sitemap-index.xml
+Sitemap: https://liange-onomichi.com/liange-onomichi/sitemap/sitemap-index.xml
 Host: https://liange-onomichi.com
