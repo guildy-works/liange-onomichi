@@ -62,47 +62,39 @@ export const Profile = () => {
 
                     <SkewScrollTriggerAnimation delay={100} style={{ margin: "0", zIndex: -1 }}>
                         <Typography variant="body1" mt={1}>
-                            1997年に大手エステサロンTBCに入社。<br />
-                            長年の勤務で、フェイシャルやボディケア、<br />
-                            光脱毛など幅広い分野の施術を手がけることができるスキルを身につけました。<br /><br />
+                            1997年TBCに入社。<br />
+                            フェイシャル、ボディ、脱毛等の施術を行い、<br />
+                            EA上級認定エステティシャン<br />
+                            美容脱毛エステティシャンの資格を取得<br />
+                            2014年退社後2015年liange〜リアンジュオープン致しました。<br />
                         </Typography>
                     </SkewScrollTriggerAnimation>
 
                     <SkewScrollTriggerAnimation delay={200} style={{ margin: "0", zIndex: -1 }}>
                         <Typography variant="body1" >
                             2014年に退社後、
-                            自らの夢を叶えるべく2015年に「Liange（リアンジュ）」をオープンしました。<br /><br />
+                            2015年に「liange〜リアンジュ」をオープン致しました。<br /><br />
                         </Typography>
                     </SkewScrollTriggerAnimation>
 
                     <SkewScrollTriggerAnimation delay={300} style={{ margin: "0", zIndex: -1 }}>
                         <Typography variant="body1" >
-                            お客様一人ひとりに合った施術を提供することをモットーに、<br />
-                            安心価格で高品質なエステメニューを展開し、<br />
-                            多くのお客様から支持を受けています。<br /><br />
+                            お客様1人1人に合った施術を行い安心価格で高品質なエステメニューを提供します。<br />
+                            皆様の日々の悩み、コンプレックスを教えてください…
                         </Typography>
                     </SkewScrollTriggerAnimation>
 
                     <SkewScrollTriggerAnimation delay={400} style={{ margin: "0", zIndex: -1 }}>
                         <Typography variant="body1">
-                            店長自身が肌の悩みやダイエット経験を持っているため、<br />
-                            お客様の気持ちに寄り添いながら施術を行います。<br />
-                        </Typography>
-                    </SkewScrollTriggerAnimation>
-
-                    <SkewScrollTriggerAnimation delay={500} style={{ margin: "0", zIndex: -1 }}>
-                        <Typography variant="body1" >
-                            また、店長の明るくフレンドリーな人柄が、<br />
-                            初めてのお客様でも安心してリラックスできる空間を演出しています。<br />
+                            お客様の気持ちに寄り添い気軽にコースを受けて頂ける空間を<br />
+                            日々考え提供していく事をお約束いたします。<br />
                         </Typography>
                     </SkewScrollTriggerAnimation>
 
                     <SkewScrollTriggerAnimation delay={600} style={{ margin: "0", zIndex: -1 }}>
                         <Typography variant="body1">
-                            エステサロンLiange（リアンジュ）は、<br />
-                            心と身体を癒すオアシスを目指しております。<br />
-                            ぜひ一度、店長自らが手がける心温まるサロンで、<br />
-                            美と癒しのひとときをお過ごしください。お待ちしております！
+                            是非一度liangeで美と癒しのひと時をお過ごしください。<br />
+                            お待ちしております。
                         </Typography>
                     </SkewScrollTriggerAnimation>
 

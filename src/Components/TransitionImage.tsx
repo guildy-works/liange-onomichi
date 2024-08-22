@@ -1,8 +1,11 @@
 import { CSSProperties } from "react";
 import { css } from "@mui/material";
-import { ScrollTrigger } from "mui-extensions/src/ScrollTrigger";
-import { lerp } from "mui-extensions/src/Utils/Math/lerp";
 import React, { ReactNode } from "react";
+import { ScrollTrigger } from "libs/ScrollTrigger";
+
+export const lerp = (x: number, y: number, t: number) => {
+    return  (1 - t) * x  + t * y;
+};
 
 interface TransitionImageProps {
     src: string;

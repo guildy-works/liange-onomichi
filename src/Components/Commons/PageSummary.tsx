@@ -1,8 +1,8 @@
 import { Box, Typography } from "@mui/material";
-import { useWindowSize } from "mui-extensions/src/Hooks/useWindowSize";
 import React, { ReactNode } from "react";
 import { SkewAnimation } from "../Animations/SkewAnimation";
 import { TransitionStaticImage } from "../TransitionImage";
+import { useWindowSize } from "Components/ScrollIndicatior";
 
 export const PageSummary = ({
     title,

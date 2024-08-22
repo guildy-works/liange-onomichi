@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import { Grow } from "@mui/material";
-import { ScrollTrigger } from "mui-extensions/src/ScrollTrigger";
+import { ScrollTrigger } from "libs/ScrollTrigger";
 import React, { ReactNode } from "react";
 
 interface GrowScrollTriggerAnimationAnimationProps {

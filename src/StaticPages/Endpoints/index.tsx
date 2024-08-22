@@ -9,11 +9,16 @@ import { Box } from "@mui/material";
 import { MenuBoard } from "StaticPages/Views/Main/Menu";
 import { Explain } from "StaticPages/Views/Main/Explain";
 import { Access } from "StaticPages/Views/Main/Access";
+import { Helmet } from "react-helmet";
 
 // markup
 export default () => {
     return (
         <Main>
+            <Helmet>
+                <title>Liange - リアンジュ　尾道</title>
+            </Helmet>
+
             <MainPanel />
             <div className="white-panel"></div>
 
@@ -23,23 +28,23 @@ export default () => {
                 <ConceptsPanel />
             </Box>
 
-            <Box p={{ xs: 2, sm: 3, md: 4 }} mt={{ xs: 3, sm: 8, md:14, lg: 20 }} sx={{ maxWidth: "1480px" }} mx="auto">
+            <Box p={{ xs: 2, sm: 3, md: 4 }} mt={{ xs: 3, sm: 8, md: 14, lg: 20 }} sx={{ maxWidth: "1480px" }} mx="auto">
                 <Profile />
             </Box>
 
-            <Box p={{ xs: 2, sm: 3, md: 4 }}  mt={{ xs: 3, sm: 8, md:14, lg: 20 }}  sx={{ maxWidth: "1480px" }} mx="auto">
+            <Box p={{ xs: 2, sm: 3, md: 4 }} mt={{ xs: 3, sm: 8, md: 14, lg: 20 }} sx={{ maxWidth: "1480px" }} mx="auto">
                 <MenuBoard />
             </Box>
 
-            <Box p={{ xs: 2, sm: 3, md: 4 }} mt={{ xs: 3, sm: 8, md:14, lg: 20 }}  sx={{ maxWidth: "1480px" }} mx="auto">
+            <Box p={{ xs: 2, sm: 3, md: 4 }} mt={{ xs: 3, sm: 8, md: 14, lg: 20 }} sx={{ maxWidth: "1480px" }} mx="auto">
                 <Explain />
             </Box>
 
-            <Box p={{ xs: 2, sm: 3, md: 4 }}  mt={{ xs: 3, sm: 8, md:14, lg: 20 }}  sx={{ maxWidth: "1480px" }} mx="auto">
+            <Box p={{ xs: 2, sm: 3, md: 4 }} mt={{ xs: 3, sm: 8, md: 14, lg: 20 }} sx={{ maxWidth: "1480px" }} mx="auto">
                 <Access />
             </Box>
 
-            <Box p={{ xs: 2, sm: 3, md: 4 }}  mt={{ xs: 3, sm: 8, md:14, lg: 20 }}  sx={{ maxWidth: "1480px" }} mx="auto">
+            <Box p={{ xs: 2, sm: 3, md: 4 }} mt={{ xs: 3, sm: 8, md: 14, lg: 20 }} sx={{ maxWidth: "1480px" }} mx="auto">
                 <div style={{ borderBottom: "2px solid currentColor" }} />
             </Box>
         </Main >

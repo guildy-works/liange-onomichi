@@ -1,9 +1,9 @@
 import { css } from "@emotion/react";
 import { Box } from "@mui/system";
-import { ScrollTrigger, ScrollTriggerTransition } from "mui-extensions/src/ScrollTrigger";
 import { StringUnitLength } from "luxon";
 import React, { CSSProperties, ReactNode } from "react";
 import { SkewAnimation } from "./Animations/SkewAnimation";
+import { ScrollTrigger } from "libs/ScrollTrigger";
 
 interface FadeAndSlideScrollTriggerAnimationProps {
     children: ReactNode;

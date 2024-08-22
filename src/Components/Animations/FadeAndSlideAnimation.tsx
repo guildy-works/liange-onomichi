@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import { Box } from "@mui/system";
-import { ScrollTriggerTransition, Transition, TransitionProps } from "mui-extensions/src/ScrollTrigger";
+import { Transition, TransitionProps } from "libs/ScrollTrigger";
 import React, { ReactNode } from "react";
 
 interface FadeAndSlideAnimationProps extends TransitionProps {

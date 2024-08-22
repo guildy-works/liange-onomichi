@@ -1,10 +1,10 @@
 import { css } from "@emotion/react";
 import { Box, Grow, Typography, useTheme } from "@mui/material";
 import { Link } from "gatsby";
-import { ScrollTrigger } from "mui-extensions/src/ScrollTrigger";
 import React, { ReactNode } from "react";
 import { FadeAndSlideAnimation } from "../Animations/FadeAndSlideAnimation";
 import { TransitionImage } from "../TransitionImage";
+import { ScrollTrigger } from "libs/ScrollTrigger";
 
 export const ServiceImageCollectionItem = ({
     src,

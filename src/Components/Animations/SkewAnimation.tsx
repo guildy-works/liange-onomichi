@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
-import { Box, CSSProperties } from "@mui/system";
-import { Transition, TransitionProps } from "mui-extensions/src/ScrollTrigger";
+import { Box } from "@mui/system";
+import { Transition, TransitionProps } from "libs/ScrollTrigger";
 import React, { ReactNode, useEffect, useRef, useState } from "react";
 
 type AnimationProps = TransitionProps;

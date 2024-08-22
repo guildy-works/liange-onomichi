@@ -16,12 +16,23 @@ export const MainPanel = () => {
         <Grid container style={{ minHeight: "calc(100vh - 40px)" }}>
 
             {/* Content */}
-            <Grid item xs={11}>
+            <Grid item xs={11} >
 
-                <Stack height="100%" justifyContent="space-around">
+                <Stack height="100%" justifyContent="space-around" >
                     {/* description */}
-                    <Stack direction="row" alignItems="center" sx={{ mt: { xs: 2, sm: 8, md: 12 }, ml: { xs: 1, sm: 12, md: 18 } }}>
-                        <Box >
+                    <Stack direction="row" alignItems="center"
+                        minHeight={"160px"}
+                        gap={{ xs: 3 }}
+                        justifyContent={"center"}
+                        flexWrap={{ xs: "wrap", sm: "nowrap" }}
+                        sx={{
+                            mt: { xs: 2, sm: 8, md: 12 },
+                            ml: { xs: 1, sm: 12, md: 18 },
+                            p: { xs: 2, sm: 2, md: 3 }
+
+                        }}>
+
+                        <Box>
                             <Typography variant="h2" sx={{
                                 ml: { xs: 2, sm: 3, md: 6 },
                                 userSelect: "none",
@@ -36,12 +47,12 @@ export const MainPanel = () => {
                                 fontFamily: "'Dancing Script' !important",
                             }} >Liange</Typography>
                         </Box>
-
                         <img style={{
-                            height: "80px",
-                            width: "80px",
+                            height: "120px",
+                            width: "120px",
                             filter: "hue-rotate(27deg) grayscale(0.28)"
                         }} src={clover} />
+
                     </Stack >
 
                     <Stack sx={{ mt: { xs: 1, sm: 2, md: 3 } }} direction="row">
@@ -55,10 +66,10 @@ export const MainPanel = () => {
                             </Typography>
                         </Box>
 
-                        <Box ml={{ xs: 0, sm: 8, md: 12, lg: 24, xl: 32 }} mt={{ xs: 8, md: 1 }} px={{ xs: 2, sm: 3 }}>
+                        <Box ml={{ xs: 0, sm: 8, md: 12, lg: 24, xl: 32 }} mt={{ xs: 2, md: 5 }} px={{ xs: 2, sm: 3 }}>
                             <Box style={{ maxWidth: "680px", width: "100%" }}>
                                 <SkewScrollTriggerAnimation delay={2000} style={{ margin: "0" }}>
-                                    <Typography variant="h6" component="h2" sx={{fontSize: "1.1rem"}}>エステティックサロン</Typography>
+                                    <Typography variant="h6" component="h2" sx={{ fontSize: "1.1rem" }}>エステティックサロン</Typography>
                                 </SkewScrollTriggerAnimation>
                                 <SkewScrollTriggerAnimation delay={2000} style={{ margin: "0" }}>
                                     <Typography variant="h4" component="h2" py={1} >Liange　- リアンジュ -</Typography>
@@ -68,8 +79,8 @@ export const MainPanel = () => {
                             <Box sx={{ mt: { xs: 3, sm: 4, md: 6 } }} style={{ maxWidth: "680px", width: "100%" }}>
                                 <SkewScrollTriggerAnimation delay={2100} style={{ width: "100%" }}>
                                     <Typography variant="body2">
-                                        17年間、大手エステサロンでの経験と実績を持ち合わせたスタッフが、<br />
-                                        リーズナブルな価格でメニューを提供するエステサロンです。<br />
+                                        大手サロンで17年間施術した実績と経験を活かし、<br />
+                                        かつリーズナブルな価格でメニューを提供するエステサロンを目指しました。<br />
                                     </Typography>
                                 </SkewScrollTriggerAnimation>
                             </Box>
@@ -87,8 +98,8 @@ export const MainPanel = () => {
                             <Box sx={{ mt: { xs: 1, md: 2 } }} style={{ maxWidth: "680px", width: "100%" }}>
                                 <SkewScrollTriggerAnimation delay={2300} style={{ width: "100%" }}>
                                     <Typography variant="body2">
-                                        アットホームな空間でリラックスしながら、美と健康を追求できるサロンです。<br />
-                                        ぜひ一度、ご来店ください。
+                                        アットホームな空間でリラックスしながら、美と健康を追求するサロン作りを目指してます。<br />
+                                        是非一度ご来店ください。
                                     </Typography>
                                 </SkewScrollTriggerAnimation>
                             </Box>
@@ -165,10 +176,10 @@ export const MainPanel = () => {
 
             {/* Vertical Line */}
             <Grid item xs={1} style={{ height: "calc(100vh - 40px)" }} py={{ xs: 2, md: 4 }}>
-                <Stack alignItems="start"  sx={{height: "100%"}} style={{ borderLeft: "2px solid currentColor" }}>
+                <Stack alignItems="start" sx={{ height: "100%" }} style={{ borderLeft: "2px solid currentColor" }}>
                     <Typography variant="h6" ml={1} my="auto" style={{ writingMode: "vertical-rl", width: "24px" }} >Liange ONOMICHI.</Typography>
 
-                    <IconButton >
+                    {/* <IconButton >
                         <SvgIcon   ><path d={mdiEmail} /> </SvgIcon>
                     </IconButton>
 
@@ -178,7 +189,7 @@ export const MainPanel = () => {
 
                     <IconButton >
                         <SvgIcon   ><path d={mdiFacebook} /> </SvgIcon>
-                    </IconButton>
+                    </IconButton> */}
                 </Stack>
             </Grid>
         </Grid >

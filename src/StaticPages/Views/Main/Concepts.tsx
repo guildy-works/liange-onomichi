@@ -33,8 +33,9 @@ export const ConceptsPanel = () => {
                         <FadeAndSlideScrollTriggerAnimation >
                             <Typography variant="body1" >
                                 私たちが目指す「美しさ」は表面的なものではありません。<br />
-                                美容鍼や全身調整を通じて、カラダの内側から美しさを引き出すことで、<br />
-                                日々の暮らしをより輝かせることが私たちの使命です。
+                                コースを受けて頂き、<br />
+                                心も身体もリラックスしていただく事で身体の内側から美しさを引き出し、<br />
+                                日々の暮らしをより輝かせる事が出来たらと考えてます。
                             </Typography>
                         </FadeAndSlideScrollTriggerAnimation>
                     </Box>

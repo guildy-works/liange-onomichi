@@ -21,7 +21,6 @@
         "@mui/icons-material": "^5.2.5",
         "@mui/material": "^5.13.4",
         "@mui/styles": "^5.2.3",
-        "mui-extensions": "https://github.com/visualiz-inc/mui-extensions.git",
         "gatsby": "^4.4.0",
         "gatsby-link": "^4.4.0",
         "gatsby-plugin-create-client-paths": "^4.4.0",

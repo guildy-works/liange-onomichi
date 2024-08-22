@@ -8,7 +8,7 @@
 const clientRoutes = ["/app/*"];
 
 module.exports = {
-    pathPrefix: `/liange`,
+    pathPrefix: `/`,
     // pathPrefix: `/path`, github pagesなどを利用する場合はこちらにルートパスを指定
     siteMetadata: {
         title: "Liange 尾道",

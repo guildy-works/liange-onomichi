@@ -1,8 +1,8 @@
 import React, { ReactElement, useEffect, useRef, useState } from "react";
 import { Curtain, useCurtain } from "../contexts/Routes";
 import { Theme, ThemeProvider, createTheme } from "@mui/material";
-import { ScrollContainer } from "mui-extensions/src/ScrollTrigger";
 import { GlobalStyle } from "StaticPages/Styles";
+import { ScrollContainer } from "libs/ScrollTrigger";
 
 /**
  * delay
@@ -33,44 +33,66 @@ export async function animate(element: HTMLElement, property: string, value: str
 
 const theme = createTheme({
     typography: {
-        fontFamily: "Noto Sans JP, sans-serif",
+        fontFamily: "Noto Sans JP, sans-serif", // 前回の設定を維持
         fontWeightRegular: 500,
         fontWeightLight: 300,
         fontWeightBold: 700,
         fontWeightMedium: 500,
-        h1: {
-            fontWeight: 300,
-            fontSize: "3.2rem"
+
+        body1: {
+            fontSize: "min(2.8vw, 0.82rem)",
+            letterSpacing: "0.15rem",
+            lineHeight: "1.5rem",
+            fontWeight: 500
         },
-        h2: {
-            fontWeight: 300,
-            fontSize: "2.6rem"
-        },
-        h3: {
-            fontWeight: 300,
-            fontSize: "2.4rem"
-        },
-        h4: {
-            fontWeight: 400,
-            fontSize: "1.8rem",
-        },
-        h5: {
-            fontWeight: 400,
-            fontSize: "1.4rem"
+        body2: {
+            fontSize: "min(2.8vw, 0.82rem)",
+            letterSpacing: "0.08rem",
+            lineHeight: "1.2rem",
+            fontWeight: 500
         },
         h6: {
-            fontWeight: 500,
-            fontSize: "1.1rem"
+            fontSize: "min(3.2vw, 1rem)",
+            letterSpacing: "0.24rem",
+            lineHeight: "1.8rem",
+            fontWeight: 400
         },
-        subtitle1: {
-            fontWeight: 500,
-            fontSize: "1.4rem",
-            letterSpacing: "0.3rem"
+        h5: {
+            fontSize: "min(3.2vw, 1rem)",
+            letterSpacing: "0.24rem",
+            lineHeight: "1.8rem",
+            fontWeight: 400
         },
-        body1: {
-            fontSize: "0.9rem"
-        }
+        h4: {
+            fontSize: "min(3.6vw, 1.1rem)",
+            letterSpacing: "0.24rem",
+            lineHeight: "1.8rem",
+            fontWeight: 400
+        },
+        h3: {
+            fontSize: "min(4vw, 1.3rem)",
+            letterSpacing: "0.24rem",
+            lineHeight: "2rem",
+            fontWeight: 400
+        },
+        h2: {
+            fontSize: "min(4.5vw, 1.6rem)",
+            letterSpacing: "0.24rem",
+            lineHeight: "2.2rem",
+            fontWeight: 400
+        },
+        h1: {
+            fontSize: "min(5.6vw, 2.8rem)",
+            letterSpacing: "0.24rem",
+            lineHeight: "2.4rem",
+            fontWeight: 400
+        },
     },
+    palette: {
+        primary: {
+            main: "#5a7f6a",
+        }
+    }
 });
 
 interface MainProps {

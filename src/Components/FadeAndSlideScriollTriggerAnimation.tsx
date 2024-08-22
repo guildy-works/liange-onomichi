@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
-import { ScrollTrigger, ScrollTriggerTransition } from "mui-extensions/src/ScrollTrigger";
 import React, { CSSProperties, ReactNode } from "react";
 import { FadeAndSlideAnimation } from "./Animations/FadeAndSlideAnimation";
+import { ScrollTrigger } from "libs/ScrollTrigger";
 
 interface FadeAndSlideScrollTriggerAnimationProps {
     children: ReactNode;
