@@ -35,10 +35,7 @@ export const MenuBoard = () => {
             </Grid>
 
             <Grid item xs={12} sm={6} md={4} >
-                <Typography variant="h5" color={theme.palette.primary.dark}>光脱毛</Typography>
-                <List>
-                    <Typography variant="body1">•	1回 ¥10,000</Typography>
-                </List>
+                <Typography variant="h5" color={theme.palette.primary.dark}>全身光脱毛</Typography>
             </Grid>
 
             <Grid item xs={12} sm={6} md={4} >

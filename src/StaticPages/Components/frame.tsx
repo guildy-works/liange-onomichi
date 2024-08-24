@@ -33,7 +33,7 @@ export async function animate(element: HTMLElement, property: string, value: str
 
 const theme = createTheme({
     typography: {
-        fontFamily: "Noto Sans JP, sans-serif", // 前回の設定を維持
+        fontFamily: "Noto Sans JP, sans-serif",
         fontWeightRegular: 500,
         fontWeightLight: 300,
         fontWeightBold: 700,

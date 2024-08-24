@@ -15,7 +15,7 @@ export const Explain = () => {
     return (
         <Grid container  spacing={{ xs: 2, sm: 4, md: 8 }}>
             <Grid item xs={12}>
-                <Typography variant="h2" >- メニューについて</Typography>
+                <Typography variant="h2" >- 光脱毛</Typography>
             </Grid>
 
             <Grid item container xs={12} md={5} spacing={1} >

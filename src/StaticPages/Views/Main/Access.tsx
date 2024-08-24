@@ -36,7 +36,6 @@ export const Access = () => {
                         <Typography variant="h5">休日 / 日曜日・祝日</Typography>
                         <Typography variant="h5">営業時間 / 09:00～19:00</Typography>
                         <Typography variant="h5">電話番号 / <a href="tel:08082447899">080 - 8244 - 7899</a></Typography>
-                        <Typography variant="h5">Email / <a href="tel:">aaa@aaa.com</a></Typography>
                         <Typography variant="h5">〒722-0018</Typography>
                         <Typography variant="h5">
                             広島県尾道市平原 3-21-15<br />
