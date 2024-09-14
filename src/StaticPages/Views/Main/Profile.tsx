@@ -27,23 +27,10 @@ export const Profile = () => {
                         }}
                     />
                 </Grid>
-                <Grid item xs={6} sm={4} md={6} >
+                <Grid item xs={12} sm={4} md={12} >
                     <TransitionImage className=""
                         parallaxSlideLength={20}
                         src={img1}
-                        alt="test"
-                        style={{
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "cover"
-                        }}
-                    />
-                </Grid>
-                <Grid item xs={6} sm={4} md={6}>
-                    <TransitionImage
-                        parallaxSlideLength={20}
-                        className=""
-                        src={img2}
                         alt="test"
                         style={{
                             width: "100%",

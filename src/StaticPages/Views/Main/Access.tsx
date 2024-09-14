@@ -41,6 +41,12 @@ export const Access = () => {
                             広島県尾道市平原 3-21-15<br />
                             グランシャリオ平原301号室
                         </Typography>
+
+                        <Typography variant="h5">
+                            駐車場のご案内<br />
+                            ３０１、I、B<br />
+                            上記の番号の駐車場をご利用ください。
+                        </Typography>
                     </Stack>
                 </Grid>
                 <Grid item container xs={12} md={6} spacing={2}>
@@ -56,36 +62,10 @@ export const Access = () => {
                             }}
                         />
                     </Grid>
-                    <Grid item xs={6} sm={4} md={6} >
-                        <TransitionImage className=""
-                            parallaxSlideLength={0}
-                            src={img17}
-                            alt="test"
-                            style={{
-                                width: "100%",
-                                height: "100%",
-                                objectFit: "cover"
-                            }}
-                        />
-                    </Grid>
-                    <Grid item xs={6} sm={4} md={6}>
-                        <TransitionImage
-                            parallaxSlideLength={0}
-                            className=""
-                            src={door}
-                            alt="test"
-                            style={{
-                                width: "100%",
-                                height: "100%",
-                                objectFit: "cover"
-                            }}
-                        />
-                    </Grid>
-
                 </Grid>
             </Grid>
 
-            <Box sx={{ mt: { xs: 2, sm: 4, md: 7} }} >
+            <Box sx={{ mt: { xs: 2, sm: 4, md: 7 } }} >
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3291.4909912322055!2d133.17409245108826!3d34.414281480413294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3551002af6fa2997%3A0xacc7f39cc95c5178!2z44CSNzIyLTAwMTgg5bqD5bO255yM5bC-6YGT5biC5bmz5Y6f77yT5LiB55uu77yS77yR4oiS77yR77yVIOOCsOODqeODs-OCt-ODo-ODquOCquW5s-WOnyAzMDE!5e0!3m2!1sja!2sjp!4v1614094794108!5m2!1sja!2sjp"
                     style={{ border: "0", width: "100%", height: "460px" }}
