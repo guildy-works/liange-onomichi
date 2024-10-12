@@ -8,16 +8,7 @@ import { ScrollContainer, ScrollTrigger } from "@/libs/ScrollTrigger";
 import Link from "next/link";
 import { Header } from "./Header";
 import { CurtainContainer } from "@/components/Curtain";
-
-const sitemapItems = [
-    { name: 'TOP', path: '/' },
-    { name: 'サービス', path: '/services' },
-    { name: 'お知らせ', path: '/news' },
-    { name: 'イベント情報', path: '/events' },
-    { name: 'Match Bondの想い', path: '/about' },
-    { name: '会社概要', path: '/company' },
-    { name: 'お問い合わせ', path: '/contact' },
-];
+import Head from "next/head";
 
 export default function RootLayout({
     children,
@@ -25,7 +16,11 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="ja" >
+        <html lang="ja">
+            <head>
+                <meta name="description" content="広島県尾道市の脱毛・エステティックサロン　Liangeです" />
+                <title>Liange - リアンジュ 尾道</title>
+            </head>
             <body>
                 <ScrollContainer className="flex min-h-screen flex-col h-svh relative">
                     <CurtainContainer open colors={["#468189", "#77aca2", "#9dbebb", "#c4cdc1", "#f4eace", "#dee1dd"]}>

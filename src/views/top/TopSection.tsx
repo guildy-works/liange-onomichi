@@ -37,7 +37,7 @@ export const TopSection = () => {
                         <div className="ml-0 sm:ml-8 md:ml-12 lg:ml-24 xl:ml-32 mt-2 md:mt-5 px-2 sm:px-3">
                             <div className="max-w-[680px] w-full">
                                 <SkewScrollTriggerAnimation delay={2000}>
-                                    <h2 className="text-size3">脱毛・</h2>
+                                    <h2 className="text-size3">脱毛・エステティックサロン</h2>
                                 </SkewScrollTriggerAnimation>
                                 <SkewScrollTriggerAnimation delay={2000} className="mt-2">
                                     <span className="text-title2 font-jost py-1">Liange</span>

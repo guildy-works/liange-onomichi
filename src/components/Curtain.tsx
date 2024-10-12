@@ -128,7 +128,6 @@ export class CurtainCore {
     public init(curtainHeight = "100vh", curtainOneItemWidth = 100, shadow = false) {
         // one curtain item width
         const itemWidth = 100 / this.colors.length;
-        console.log("itemWidth", this.colors);
         this.parent.style.display = "flex";
         for (const item of this.colors) {
             const div = document.createElement("div");
