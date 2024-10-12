@@ -13,13 +13,7 @@ import Head from "next/head";
 export default function Home() {
     return (
         <>
-            <Head>
-                <meta name="description" content="広島県尾道市の脱毛・エステティックサロン　Liangeです" />
-                <title>Lianwefwefawfdge 尾道 !</title>
-            </Head>
-
             <TopSection />
-
 
             <AboutSection />
 
