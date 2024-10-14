@@ -21,8 +21,9 @@ export default function RootLayout({
     return (
         <html lang="ja">
             <head>
-                <meta name="description" content="広島県尾道市の脱毛・エステティックサロン　Liangeです" />
                 <title>Liange - リアンジュ 尾道</title>
+                <meta name="description" content="広島県尾道市にある女性専用の脱毛・エステティックサロンサロンです。" />
+                <meta name="keywords" content="脱毛,尾道,エステ,低価格,安い,全身脱毛,光脱毛" />
 
                 <Script
                     src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
