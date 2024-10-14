@@ -9,6 +9,9 @@ import Link from "next/link";
 import { Header } from "./Header";
 import { CurtainContainer } from "@/components/Curtain";
 import Head from "next/head";
+import Script from 'next/script'; 
+
+const gaId  = "G-XNC8SQYTYW"
 
 export default function RootLayout({
     children,
@@ -20,6 +23,20 @@ export default function RootLayout({
             <head>
                 <meta name="description" content="広島県尾道市の脱毛・エステティックサロン　Liangeです" />
                 <title>Liange - リアンジュ 尾道</title>
+
+                <Script
+                    src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+                    strategy='afterInteractive'
+                    async
+                />
+                <Script id='google-analytics' strategy='afterInteractive'>
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', '${gaId}');
+                    `}
+                </Script>
             </head>
             <body>
                 <ScrollContainer className="flex min-h-screen flex-col h-svh relative">
