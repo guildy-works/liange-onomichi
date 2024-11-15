@@ -8,14 +8,13 @@ interface SkewAnimationProp extends AnimationProps {
     bgcolor?: string;
     speed?: number;
     skewPanelClass?: string;
-    tag?: ElementType;
 }
 
 export const SkewAnimation = (props: SkewAnimationProp) => {
     const [el, setEl] = useState<HTMLElement | null>(null);
     const [time, setTime] = useState(0);
 
-    const Tag = props.tag ?? "div";
+
 
     useEffect(() => {
         const width = el?.getBoundingClientRect().width;
@@ -31,20 +30,20 @@ export const SkewAnimation = (props: SkewAnimationProp) => {
 
     return <Transition {...props}>
         {
-            state => <Tag
+            state => <div
                 style={{
                     ...props.style,
                     position: "relative",
                     width: "fit-content",
                 }}
                 className={props.className}
-                ref={(el: any) => {
+                ref={(el:any) => {
                     if (el) {
                         setEl(el as any);
                     }
                 }}
             >
-                <span
+                <div
                     className={clsx("bg-white absolute inset-0", props.skewPanelClass)}
                     style={{
                         transition: `transform ${time}ms cubic-bezier(0.4, 0.41, 0.1, 0.65)`,
@@ -59,7 +58,7 @@ export const SkewAnimation = (props: SkewAnimationProp) => {
                     }}
                 />
                 {props.children as any}
-            </Tag>
+            </div>
         }
     </Transition >;
 };

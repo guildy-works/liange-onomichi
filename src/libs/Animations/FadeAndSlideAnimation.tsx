@@ -1,4 +1,4 @@
-import { ElementType, ReactNode, useState } from "react";
+import { ReactNode, useState } from "react";
 import { Transition, TransitionProps } from "../ScrollTrigger";
 import clsx from "clsx";
 
@@ -24,7 +24,6 @@ interface FadeAndSlideAnimationProps extends TransitionProps {
         // eslint-disable-next-line @typescript-eslint/ban-types
         transformOrigin?: "bottom" | "center" | "left" | "right" | "top" | (string & {});
     }
-    tag?: ElementType;
 }
 
 export const FadeAndSlideAnimation = (props: FadeAndSlideAnimationProps) => {
@@ -33,7 +32,6 @@ export const FadeAndSlideAnimation = (props: FadeAndSlideAnimationProps) => {
     const buildTransform = (transform: FadeAndSlideAnimationProps["transform"], scale: number) =>
         `translate(${transform?.translate?.x ?? "0"},${transform?.translate?.y ?? "0"}) rotate(${transform?.rotate ?? "0"}) scale(${transform?.scale ?? scale})`
 
-    const Tag = props.tag ?? "div";
 
     return <Transition
         in={props.in}
@@ -41,12 +39,12 @@ export const FadeAndSlideAnimation = (props: FadeAndSlideAnimationProps) => {
     >
         {state => {
 
-            return <Tag
+            return <div
                 className={clsx(props.className, "size-full")}
                 style={{
                     ...{
                         transformOrigin: transform?.transformOrigin,
-                        transform: buildTransform(transform, 0.8),
+                        transform: buildTransform(transform, 0.94),
                         opacity: 0,
                         transition: `all ${parse(props.delay)} ${props.duration ?? 3000}ms cubic-bezier(0.18, 0.66, 0.08, 0.97)`
                     },
@@ -60,7 +58,7 @@ export const FadeAndSlideAnimation = (props: FadeAndSlideAnimationProps) => {
                 }}
             >
                 {props.children as ReactNode}
-            </Tag>
+            </div>
         }}
     </Transition>;
 };

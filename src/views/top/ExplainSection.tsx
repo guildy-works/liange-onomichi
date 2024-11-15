@@ -4,11 +4,11 @@ import img8 from "@/assets//images/img8.jpg";
 import img9 from "@/assets//images/img9.jpg";
 import img10 from "@/assets//images/img10.jpg";
 import img11 from "@/assets//images/img11.jpg";
-import { TransitionImage } from "@/libs/ScrollTriggerAnimations/TransitionImage";
 import { SkewScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/SkewScrollTriggerAnimation";
 import { TitleType, TitleType2, TitleType3 } from "@/components/Titles";
 import { FadeAndSlideScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/FadeAndSlideScrollTriggerAnimation";
 import { SectionBar } from "@/components/SectionBar";
+import { TransitionImage } from "@/libs/ScrollTriggerAnimations/TransitionImage";
 
 export const ExplainSection = () => {
     return (

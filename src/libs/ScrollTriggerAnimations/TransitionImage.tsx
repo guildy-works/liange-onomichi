@@ -2,8 +2,10 @@
 import clsx from "clsx";
 import type { CSSProperties, ReactNode } from "react";
 import React from "react";
+import Image from "next/image";
+import { StaticImageData } from "next/image";
 import { ScrollTrigger } from "../ScrollTrigger/ScrollTrigger";
-import Image, { StaticImageData, } from "next/image";
+import css from "./AnimatedImage.module.scss";
 
 export const lerp = (x: number, y: number, t: number) => {
     return (1 - t) * x + t * y;
@@ -17,6 +19,7 @@ interface TransitionImageProps {
         from?: number;
         to?: number;
     }
+    baseScale?: number;
     style?: CSSProperties;
     className?: string;
     imgClassName?: string;
@@ -28,7 +31,7 @@ export const TransitionImage = (props: TransitionImageProps) => {
     const half = range * 0.5;
     const getPosition = (t: number) => lerp(-half, half, t);
     const getScale = (t: number) => lerp(
-        scale?.from ?? 0.96,
+        scale?.from ?? 0.97,
         scale?.to ?? 1,
         t
     );
@@ -44,32 +47,34 @@ export const TransitionImage = (props: TransitionImageProps) => {
         >
             {
                 (state, info) => <>
-                    <div style={{
-                        transition: "all 3s cubic-bezier(0.51, 0.15, 0.25, 0.97)",
-                        opacity: state === "entered" ? 1 : 0,
-                        width: "100%",
-                        height: "100%",
-                        transform: state === "entered" ? "translateY(0)" : "translateY(30px)",
-                    }}>
+                    <div
+                        className="w-full h-full"
+                    >
                         <div style={{
                             height: `calc(100% + ${range}px)`,
                             width: "100%",
+                            opacity: state === "entered" ? 1 : 0,
                             transition: "all 1.5s cubic-bezier(0.13, 0.59, 0.01, 0.98)",
                             transform: state === "entered" ? `translateY(${getPosition(info.scrollProgress)}px) scale(${getScale(info.scrollProgress)})` : "",
                         }}>
-                            <Image
-                                src={props.src}
-                                alt={props.alt}
-                                className={props.imgClassName}
-                                style={{
-                                    height: "100%",
-                                    width: "100%",
-                                    objectFit: "cover",
-                                    transition: "all 2.4s cubic-bezier(0.51, 0.15, 0.25, 0.97)",
-                                    transform: state === "entered" ? "scale(1.3)" : "scale(1.5)",
-                                }}
-                            />
+                            {
+                                <Image
+                                    alt={props.alt}
+                                    src={props.src}
+                                    style={{
+                                        height: "100%",
+                                        width: "100%",
+                                        objectFit: "cover",
+                                        transition: "all 2.4s cubic-bezier(0.51, 0.15, 0.25, 0.97)",
+                                        transform: state === "entered" ? "scale(1.3)" : "scale(1.5)",
+                                    }}
+                                />
+
+                            }
                         </div>
+
+                        {<div className={clsx(css.shutter2, state === "entered" ? css.animate2 : "")} />}
+                        {<div className={clsx(css.shutter, state === "entered" ? css.animate : "")} />}
                     </div>
                 </>
             }
