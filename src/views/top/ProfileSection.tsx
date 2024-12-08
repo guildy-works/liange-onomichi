@@ -27,12 +27,12 @@ export const ProfileSection = () => {
                             フェイシャル、ボディ、脱毛等の施術を行い、<br />
                             EA上級認定エステティシャン<br />
                             美容脱毛エステティシャンの資格を取得<br />
-                            2014年退社後2015年liange〜リアンジュオープン致しました。
+                            2014年退社後2015年Liange〜リアンジュオープン致しました。
                         </SkewScrollTriggerAnimation>
 
                         <SkewScrollTriggerAnimation delay={200} tag="p" skewPanelClass="!bg-color2">
                             2014年に退社後、
-                            2015年に「liange〜リアンジュ」をオープン致しました。
+                            2015年に「Liange〜リアンジュ」をオープン致しました。
                         </SkewScrollTriggerAnimation>
 
                         <SkewScrollTriggerAnimation delay={300} tag="p" skewPanelClass="!bg-color2">
@@ -46,7 +46,7 @@ export const ProfileSection = () => {
                         </SkewScrollTriggerAnimation>
 
                         <SkewScrollTriggerAnimation delay={600} tag="p" skewPanelClass="!bg-color2">
-                            是非一度liangeで美と癒しのひと時をお過ごしください。<br />
+                            是非一度Liangeで美と癒しのひと時をお過ごしください。<br />
                             お待ちしております。
                         </SkewScrollTriggerAnimation>
 

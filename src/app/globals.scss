@@ -12,10 +12,11 @@
 
 body {
     color: rgb(var(--foreground-rgb));
-    background: white;
-    @apply text-size-p text-font1;
-    font-family: "Noto Sans JP",sans-serif;
+    background: #fffbfb;
+    @apply text-http://localhost:3000/size-p text-font1;
+    font-family: "游明朝", YuMincho, "Hiragino Mincho ProN", "Hiragino Mincho Pro", serif;
 }
+
 
 p,div{
     @apply text-size-p;

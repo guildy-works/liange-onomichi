@@ -5,7 +5,7 @@ import img16 from "@/assets/images/img16.jpg";
 import clover1 from "@/assets/images/clover1.png";
 import { TransitionImage } from "@/libs/ScrollTriggerAnimations/TransitionImage";
 import { FadeAndSlideScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/FadeAndSlideScrollTriggerAnimation";
-import Image from "next/image";
+import Image from 'next-export-optimize-images/picture';
 import { MdCalendarMonth, MdCarCrash, MdMap, MdPhone, MdWatch } from "react-icons/md";
 import { SectionBar } from "@/components/SectionBar";
 

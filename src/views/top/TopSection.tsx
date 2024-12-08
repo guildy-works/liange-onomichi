@@ -7,7 +7,7 @@ import img5 from "@/assets/images/img5.jpg";
 import img11 from "@/assets/images/img11.jpg";
 import { SkewScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/SkewScrollTriggerAnimation";
 import { TransitionImage } from "@/libs/ScrollTriggerAnimations/TransitionImage";
-import Image from "next/image";
+import Image from 'next-export-optimize-images/picture';
 
 export const TopSection = () => {
     return (

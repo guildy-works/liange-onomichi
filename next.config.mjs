@@ -1,3 +1,4 @@
+import withImageOptimizer from "next-export-optimize-images"
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -10,7 +11,7 @@ const nextConfig = {
      *
      * @see https://nextjs.org/docs/views/api-reference/components/image#unoptimized
      */
-    images: { unoptimized: true } ,
+    images: {  } ,
     compiler: {
     },
     sassOptions: {
@@ -18,4 +19,4 @@ const nextConfig = {
     },
 };
 
-export default nextConfig;
+export default withImageOptimizer(nextConfig);

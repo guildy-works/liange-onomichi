@@ -1,6 +1,6 @@
 import { TitleType } from "@/components/Titles"
 import { FadeAndSlideScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/FadeAndSlideScrollTriggerAnimation"
-import Image from "next/image"
+import Image from 'next-export-optimize-images/picture';
 import AboutImage from "@/assets/img.jpg"
 
 export const AboutSection1= () => <div className="w-full relative">

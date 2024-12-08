@@ -1,7 +1,5 @@
-import clover1 from "@/assets/images/clover.jpg";
 import { TitleType3 } from "@/components/Titles";
 import { FadeAndSlideScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/FadeAndSlideScrollTriggerAnimation";
-import Image from "next/image";
 import { ElementType } from "react";
 
 export const MenuSection = () => {
@@ -11,7 +9,7 @@ export const MenuSection = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 {
                     menuItems.map((item, index) => (
-                        <div className="w-full mt-8">
+                        <div className="w-full mt-8" key={item.title}>
                             <TitleType3 title={item.title} />
                             <ul className="mt-4">
                                 {

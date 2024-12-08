@@ -1,6 +1,4 @@
-import Image from "next/image";
-import { ReactNode } from "react";
-
+import Image from 'next-export-optimize-images/picture';
 import SectionImg from "@/assets/section_bar.svg"
 import clsx from "clsx";
 

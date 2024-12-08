@@ -1,5 +1,7 @@
-import { ScrollTriggerTransition, Transition, TransitionProps } from "../../lib/ScrollTrigger";
-import React, { ReactNode } from "react";
+
+import React, { ReactNode, useRef } from "react";
+import { Transition, TransitionStatus } from "react-transition-group";
+import { TransitionProps } from "./FadeAndSlideAnimation";
 
 interface GrowAnimationProps extends TransitionProps {
     transform?: {
@@ -16,9 +18,11 @@ interface GrowAnimationProps extends TransitionProps {
 
 export const TransformAnimation = (props: GrowAnimationProps) => {
     const { transform } = props;
+    const timeout = props.delay ?? 0;
+    const nodeRef = useRef(null);
+
     return <Transition
-        in={props.in}
-        delay={props.delay}
+        in={props.in} timeout={timeout} nodeRef={nodeRef}
     >
         {state =>
             <div

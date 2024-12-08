@@ -1,8 +1,6 @@
 import { TitleType, TitleType2 } from "@/components/Titles"
 import { FadeAndSlideScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/FadeAndSlideScrollTriggerAnimation"
-import Image from "next/image"
 import { SkewScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/SkewScrollTriggerAnimation"
-import { HighlightMarker } from "@/components/HighlightMarker"
 import { TransitionImage } from "@/libs/ScrollTriggerAnimations/TransitionImage"
 import BabyImage from "@/assets/baby.jpg"
 

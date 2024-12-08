@@ -8,20 +8,13 @@ const config: Config = {
         "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
-        extend: {
-            backgroundImage: {
-                "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-                "gradient-conic":
-                    "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-            },
-        },
         fontSize: {
             "navigation": ["min(2.8vw, 0.82rem)", { letterSpacing: "0.1rem", fontWeight: 500 }],
             "size-p-wide": ["min(2.8vw, 0.82rem)", { letterSpacing: "0.08rem", lineHeight: "1.5rem", fontWeight: "500" }],
-            "size-p": ["min(3vw, 0.82rem)", { letterSpacing: "0.04rem", lineHeight: "1.2rem", fontWeight: "500" }],
-            size3: ["min(2.8vw, 0.72rem)", { letterSpacing: "0.04rem", lineHeight: "1.2rem", fontWeight: "500" }],
-            size2: ["min(3.2vw, 0.9rem)", { letterSpacing: "0.04rem", lineHeight: "1.2rem", fontWeight: "500" }],
-            size1: ["min(3.8vw, 1.05rem)", { letterSpacing: "0.04rem", lineHeight: "1.2rem", fontWeight: "400" }],
+            "size-p": ["min(3vw, 0.82rem)", { letterSpacing: "0.04rem", lineHeight: "1.5rem", fontWeight: "500" }],
+            size3: ["min(2.8vw, 0.72rem)", { letterSpacing: "0.04rem", lineHeight: "1.5rem", fontWeight: "500" }],
+            size2: ["min(3.2vw, 0.9rem)", { letterSpacing: "0.04rem", lineHeight: "1.5rem", fontWeight: "500" }],
+            size1: ["min(3.8vw, 1.05rem)", { letterSpacing: "0.04rem", lineHeight: "1.5rem", fontWeight: "400" }],
             title4: ['min(3.6vw, 1.1rem)', { letterSpacing: "0rem", lineHeight: "1.8rem", fontWeight: "400" }],
             title3: ['min(4vw, 1.3rem)', { letterSpacing: "0rem", lineHeight: "2rem", fontWeight: "400" }],
             title2: ['min(4.5vw, 1.6rem)', { letterSpacing: "0rem", lineHeight: "2.2rem", fontWeight: "400" }],
