@@ -32,7 +32,7 @@ export const TopSection = () => {
                                     <span className="ml-2">iange</span>
                                 </h1>
                             </div>
-                            <Image className="size-[100px] md:size-[120px] filter hue-rotate-[27deg] grayscale-[0.28]" src={clover} alt="clover" />
+                            <Image className="w-[100px] md:w-[120px] filter hue-rotate-[27deg] grayscale-[0.28]" src={clover} alt="clover" />
                         </div>
 
                         <div className="max-w-[680px] w-full mt-8 md:mt-32">

@@ -33,7 +33,7 @@ export const AccessSection = () => {
                             <MdPhone className="w-6 h-6 mr-4 text-primary-600" />
                             <div>
                                 <p>お問い合わせ</p>
-                                <a href="tel:08082447899" className="text-green-600 hover:underline">080-8244-7899</a>
+                                <a href="tel:08082447899" className="text-green-700 hover:underline">080-8244-7899</a>
                             </div>
                         </div>
                         <div className="flex items-center">
@@ -54,7 +54,7 @@ export const AccessSection = () => {
                         </div>
 
                         <div className="flex items-center mt-8">
-                            <h3 className="text-title4 text-red-400">＊ 当店は女性専用です</h3>
+                            <h3 className="text-title4 text-red-600">＊ 当店は女性専用です</h3>
                         </div>
                     </div>
                 </div>
@@ -76,6 +76,7 @@ export const AccessSection = () => {
 
             <div className="my-12">
                 <iframe
+                    title="map"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3291.4909912322055!2d133.17409245108826!3d34.414281480413294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3551002af6fa2997%3A0xacc7f39cc95c5178!2z44CSNzIyLTAwMTgg5bqD5bO255yM5bC-6YGT5biC5bmz5Y6f77yT5LiB55uu77yS77yR4oiS77yR77yVIOOCsOODqeODs-OCt-ODo-ODquOCquW5s-WOnyAzMDE!5e0!3m2!1sja!2sjp!4v1614094794108!5m2!1sja!2sjp"
                     className="w-full h-[400px] rounded-lg"
                     allowFullScreen={undefined}

@@ -11,15 +11,15 @@ export const MenuSection = () => {
                     menuItems.map((item, index) => (
                         <div className="w-full mt-8" key={item.title}>
                             <TitleType3 title={item.title} />
-                            <ul className="mt-4">
+                            <div className="mt-4">
                                 {
                                     item.items.map((item, index) => (
-                                        <FadeAndSlideScrollTriggerAnimation tag="li" key={index} className="text-font1 mt-2">
+                                        <FadeAndSlideScrollTriggerAnimation key={index} className="text-font1 mt-2">
                                             {item}
                                         </FadeAndSlideScrollTriggerAnimation>
                                     ))
                                 }
-                            </ul>
+                            </div>
                         </div>
                     ))
                 }
