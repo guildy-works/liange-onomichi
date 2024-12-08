@@ -41,20 +41,19 @@ export const TransitionImage = (props: TransitionImageProps) => {
             scrollEndOffset={"100% + 40vh"}
             scrollStartOffset="-20vh"
             style={props.style}
-
-            className={clsx("overflow-hidden relative", props.className)}
+            className={clsx("overflow-hidden relative size-full", props.className)}
         >
             {
-                ( info) => <>
+                (info) => <>
                     <div
-                        className="size-full"
+                        className="h-full w-full"
                     >
                         <div style={{
                             height: `calc(100% + ${range}px)`,
                             width: "100%",
                             opacity: info.triggered ? 1 : 0,
                             transition: "all 1.5s cubic-bezier(0.13, 0.59, 0.01, 0.98)",
-                            transform: info.triggered? `translateY(${getPosition(info.scrollProgress)}px) scale(${getScale(info.scrollProgress)})` : "",
+                            transform: info.triggered ? `translateY(${getPosition(info.scrollProgress)}px) scale(${getScale(info.scrollProgress)})` : "",
                         }}>
                             <Image
                                 alt={props.alt}
@@ -108,7 +107,7 @@ export const TransitionStaticImage = (props: TransitionStaticImageProps) => {
                         overflow: "hidden",
                         width: "100%",
                         height: "100%",
-                        transform:info.triggered ? "translateY(0)" : "translateY(30px)",
+                        transform: info.triggered ? "translateY(0)" : "translateY(30px)",
                     }}>
                         <div style={{
                             height: `calc(100% + ${range}px)`,

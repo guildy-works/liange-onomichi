@@ -7,9 +7,9 @@ import { TransitionImage } from "@/libs/ScrollTriggerAnimations/TransitionImage"
 export default function AboutSection() {
 
     return (
-        <div className="max-w-screen-md w-full flex flex-wrap  px-4 sm:px-8 relative">
+        <div className="max-w-screen-md w-full flex flex-wrap  px-8 sm:px-16 relative">
            
-           <div className="bg-color2 h-[800px] -top-[50%] -left-8 w-svw pb-10 -z-10 absolute"></div>
+           <div className="bg-color2 h-[800px] -top-[30%] -left-0 w-svw pb-10 -z-10 absolute"></div>
 
             <div className="w-full md:w-1/2">
                 <div className="flex flex-col justify-center h-full">
@@ -46,21 +46,21 @@ export default function AboutSection() {
                 <div className="flex flex-wrap">
                     <div className="w-full sm:w-1/3 md:w-full p-1">
                         <TransitionImage
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover rounded-sm"
                             src={room2}
                             alt="test"
                         />
                     </div>
                     <div className="w-1/2 md:w-1/2 p-1">
                         <TransitionImage
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cove rounded-sm"
                             src={nature}
                             alt="test"
                         />
                     </div>
                     <div className="w-1/2 md:w-1/2 p-1">
                         <TransitionImage
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover rounded-sm"
                             src={window}
                             alt="test"
                         />

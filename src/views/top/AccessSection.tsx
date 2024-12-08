@@ -12,7 +12,7 @@ import { SectionBar } from "@/components/SectionBar";
 export const AccessSection = () => {
 
     return (
-        <div className="max-w-screen-md mx-auto px-4 py-12 flex flex-col mt-24 md:mt-36 ">
+        <div className="max-w-screen-md mx-auto px-8 py-12 flex flex-col mt-24 md:mt-36 ">
             <FadeAndSlideScrollTriggerAnimation className="">
                 <SectionBar text="Access"></SectionBar>
             </FadeAndSlideScrollTriggerAnimation>

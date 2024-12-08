@@ -38,12 +38,12 @@ export function CurtainContainer(props: CurtainProps) {
         }
     }, [props.open]);
 
-    const open = async (durationMs = 800) => {
+    const open = async (durationMs = 2500) => {
         await delay(1);
         await curtain?.current?.play("2.5px", durationMs);
     }
 
-    const close = async (durationMs = 800) => {
+    const close = async (durationMs = 1200) => {
         await delay(1);
         await curtain?.current?.play("100vh", durationMs);
     }
