@@ -7,6 +7,7 @@ const config: Config = {
         "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
+    safelist: ["overflow-hidden","size-full"],
     theme: {
         fontSize: {
             "navigation": ["min(2.8vw, 0.82rem)", { letterSpacing: "0.1rem", fontWeight: 500 }],
@@ -27,26 +28,18 @@ const config: Config = {
             xl: '1920px',
         },
         fontFamily: {
-            sans: ['Zen Old Mincho', 'sans-serif'],
-            serif: ['Zen Old Mincho', 'sans-serif'],
-            body: "sans",
             asterdam: ['Amsterdam', 'sans-serif'],
             jost: ['Jost', 'sans-serif'],
         },
         colors: {
             ...colors,
-
             color3: '#85a48c',
             color1: '#f3e8e8',
             color2: '#f0f0f0',
-
-
             white: '#ffffff',
-
             font1: '#23313f',
             font2: 'rgb(223 150 150)',
             font3: '#c07a7a',
-
             grey1: '#bba3a3',
             grey2: '#bba3a3',
         },
