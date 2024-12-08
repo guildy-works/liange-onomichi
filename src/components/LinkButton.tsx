@@ -1,6 +1,5 @@
 'use client'
 
-import { css } from "@emotion/css";
 import Link from "next/link";
 import styles from "./LinkButton.module.scss";
 
