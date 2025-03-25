@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap');
+
 @font-face {
     font-family: "Amsterdam";
     src: url("/Amsterdam_Four.woff");
@@ -10,11 +12,12 @@
 body {
     color: rgb(var(--foreground-rgb));
     @apply text-size-p text-font1;
-    font-family: "游明朝", YuMincho, "Hiragino Mincho ProN", "Hiragino Mincho Pro", serif;
+    font-family: "Zen Old Mincho", serif;
 }
 
 
-p,div{
+p,
+div {
     @apply text-size-p;
 }
 
@@ -33,6 +36,7 @@ p,div{
 
 .active {
     @apply pl-3;
+
     &::before {
         content: "";
         position: absolute;

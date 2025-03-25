@@ -38,7 +38,7 @@ export default function RootLayout({
                     `}
                 </Script>
             </head>
-            <body>
+            <body className="bg-white">
                 <div className="flex min-h-screen flex-col h-svh relative">
                     <CurtainContainer open colors={["#468189", "#77aca2", "#9dbebb", "#c4cdc1", "#f4eace", "#dee1dd"]}>
                         <Header />
