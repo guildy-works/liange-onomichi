@@ -41,7 +41,7 @@ export const MenuSection = () => {
 export const TitleWithCircles = ({ title, tag }: { title: string, tag?: ElementType }) => {
     const Tag = tag ?? "div";
     return (
-        <FadeAndSlideScrollTriggerAnimation innerClassName="flex items-center justify-center mb-6">
+        <FadeAndSlideScrollTriggerAnimation className="flex items-center justify-center mb-6">
             <div className="w-4 h-4 rounded-full border-2 border-black"></div>
             <Tag className="text-title1 text-center mx-4 font-jost">{title}</Tag>
             <div className="w-4 h-4 rounded-full border-2 border-black"></div>

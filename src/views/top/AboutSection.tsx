@@ -47,21 +47,21 @@ export default function AboutSection() {
                     <div className="w-full sm:w-1/3 md:w-full p-1">
                         <TransitionImage
                             className="w-full h-full object-cover rounded-sm"
-                            src={room2}
+                            imageData={room2}
                             alt="test"
                         />
                     </div>
                     <div className="w-1/2 md:w-1/2 p-1">
                         <TransitionImage
                             className="w-full h-full object-cove rounded-sm"
-                            src={nature}
+                            imageData={nature}
                             alt="test"
                         />
                     </div>
                     <div className="w-1/2 md:w-1/2 p-1">
                         <TransitionImage
                             className="w-full h-full object-cover rounded-sm"
-                            src={window}
+                            imageData={window}
                             alt="test"
                         />
                     </div>

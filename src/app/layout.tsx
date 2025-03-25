@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import { Jost } from "next/font/google";
 import "./globals.scss";
-import { ScrollContainer, ScrollTrigger } from "@/libs/ScrollTrigger";
 import Link from "next/link";
 import { Header } from "./Header";
 import { CurtainContainer } from "@/components/Curtain";
@@ -40,7 +39,7 @@ export default function RootLayout({
                 </Script>
             </head>
             <body>
-                <ScrollContainer className="flex min-h-screen flex-col h-svh relative">
+                <div className="flex min-h-screen flex-col h-svh relative">
                     <CurtainContainer open colors={["#468189", "#77aca2", "#9dbebb", "#c4cdc1", "#f4eace", "#dee1dd"]}>
                         <Header />
                         <main className="flex flex-col items-center">
@@ -58,7 +57,7 @@ export default function RootLayout({
 
                         </footer>
                     </CurtainContainer>
-                </ScrollContainer>
+                </div>
             </body>
         </html>
     );

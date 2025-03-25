@@ -36,24 +36,24 @@ export const TopSection = () => {
                         </div>
 
                         <div className="max-w-[680px] w-full mt-8 md:mt-32">
-                            <SkewScrollTriggerAnimation delay={2000}>
+                            <SkewScrollTriggerAnimation delay={2}>
                                 <h2 className="text-size3">脱毛・エステティックサロン</h2>
                             </SkewScrollTriggerAnimation>
-                            <SkewScrollTriggerAnimation delay={2000} className="mt-2">
+                            <SkewScrollTriggerAnimation delay={2} className="mt-2">
                                 <span className="text-title2 font-jost py-1">Liange</span>
                                 <span className="text-title4 py-1 ml-3">- リアンジュ -</span>
                             </SkewScrollTriggerAnimation>
                         </div>
 
                         <div className="mt-4 sm:mt-8 md:mt-6 max-w-[680px] w-full">
-                            <SkewScrollTriggerAnimation delay={2100} className="w-full" tag="p">
+                            <SkewScrollTriggerAnimation delay={2.1} className="w-full" tag="p">
                                 大手サロンで17年間施術した実績と経験を活かし、<br />
                                 かつリーズナブルな価格でメニューを提供するエステサロンを目指しました。<br />
                             </SkewScrollTriggerAnimation>
                         </div>
 
                         <div className="mt-2 md:mt-4 max-w-[680px] w-full">
-                            <SkewScrollTriggerAnimation delay={2200} className="w-full" tag="p">
+                            <SkewScrollTriggerAnimation delay={2.2} className="w-full" tag="p">
                                 エステが高いと諦めていた方、<br />
                                 日頃の疲れを癒したい方、<br />
                                 綺麗になりたい方に寄り添ったコースを提供いたします。<br />
@@ -61,7 +61,7 @@ export const TopSection = () => {
                         </div>
 
                         <div className="mt-2 md:mt-4 max-w-[680px] w-full">
-                            <SkewScrollTriggerAnimation delay={2300} className="w-full" tag="p">
+                            <SkewScrollTriggerAnimation delay={2.3} className="w-full" tag="p">
                                 アットホームな空間でリラックスしながら、美と健康を追求するサロン作りを目指してます。<br />
                                 是非一度ご来店ください。
                             </SkewScrollTriggerAnimation>
@@ -74,7 +74,7 @@ export const TopSection = () => {
                         {[onomichi, img5, liangePanel, img11].map((img, index) => (
                             <TransitionImage key={index}
                                 className=" rounded-sm"
-                                src={img}
+                                imageData={img}
                                 alt={`Image ${index + 1}`}
                             />
                         ))}

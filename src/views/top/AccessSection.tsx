@@ -60,13 +60,13 @@ export const AccessSection = () => {
                 </div>
                 <div className="w-full md:w-3/5 grid md:grid-cols-2 gap-4">
                     <TransitionImage
-                        src={img16}
+                        imageData={img16}
                         parallaxSlideLength={20}
                         alt="入口"
                         className="rounded-lg"
                     />
                     <TransitionImage
-                        src={img13}
+                        imageData={img13}
                         parallaxSlideLength={20}
                         alt="駐車場"
                         className="rounded-lg"

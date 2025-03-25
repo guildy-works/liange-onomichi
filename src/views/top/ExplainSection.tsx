@@ -24,7 +24,7 @@ export const ExplainSection = () => {
                 <div className="w-1/2 sm:w-1/3 md:w-full p-1">
                     <TransitionImage
                         className="w-full h-full object-cover"
-                        src={img6}
+                        imageData={img6}
                         parallaxSlideLength={25}
                         alt="test"
                     />
@@ -33,7 +33,7 @@ export const ExplainSection = () => {
                 <div className="w-1/2 sm:w-1/3 md:w-2/6 p-1">
                     <TransitionImage
                         className="w-full h-full object-cover"
-                        src={img9}
+                        imageData={img9}
                         parallaxSlideLength={25}
                         alt="test"
                     />
@@ -41,7 +41,7 @@ export const ExplainSection = () => {
                 <div className="w-1/2 sm:w-1/3 md:w-4/6 mr-auto p-1">
                     <TransitionImage
                         className="w-full h-full object-cover"
-                        src={img10}
+                        imageData={img10}
                         parallaxSlideLength={25}
                         alt="test"
                     />
@@ -49,7 +49,7 @@ export const ExplainSection = () => {
                 <div className="w-1/2 sm:w-1/3 md:w-1/3 p-1">
                     <TransitionImage
                         className="w-full h-full object-cover"
-                        src={img11}
+                        imageData={img11}
                         parallaxSlideLength={25}
                         alt="test"
                     />
@@ -58,7 +58,7 @@ export const ExplainSection = () => {
                 <div className="w-1/2 sm:w-1/3 md:w-1/2 p-1">
                     <TransitionImage
                         className="w-full h-full object-cover"
-                        src={img7}
+                        imageData={img7}
                         parallaxSlideLength={25}
                         alt="test"
                     />
@@ -66,7 +66,7 @@ export const ExplainSection = () => {
                 <div className="w-1/2 sm:w-1/3 md:w-1/2 p-1">
                     <TransitionImage
                         className="w-full h-full object-cover"
-                        src={img8}
+                        imageData={img8}
                         parallaxSlideLength={25}
                         alt="test"
                     />
@@ -76,7 +76,7 @@ export const ExplainSection = () => {
             <div className="w-full md:w-7/12 px-8 mt-4">
                 <div className="flex flex-col justify-center h-full max-w-[620px] mx-auto">
 
-                    <FadeAndSlideScrollTriggerAnimation delay={100} tag="h3" innerClassName="text-title3">
+                    <FadeAndSlideScrollTriggerAnimation delay={0.1}  className="text-title3">
                         光脱毛について
                     </FadeAndSlideScrollTriggerAnimation>
 
@@ -88,27 +88,27 @@ export const ExplainSection = () => {
 
                     </FadeAndSlideScrollTriggerAnimation>
 
-                    <FadeAndSlideScrollTriggerAnimation delay={100} className="mt-4 md:mt-8">
+                    <FadeAndSlideScrollTriggerAnimation delay={0.1} className="mt-4 md:mt-8">
                         光脱毛の特徴
                     </FadeAndSlideScrollTriggerAnimation>
 
-                    <FadeAndSlideScrollTriggerAnimation delay={200} tag="p" className="mt-1 sm:mt-2">
+                    <FadeAndSlideScrollTriggerAnimation delay={0.2} className="mt-1 sm:mt-2">
                         光脱毛は、肌への負担が少なく、痛みを感じにくい方法です。<br />
                         数回の施術でムダ毛の減少が実感できることが一般的です。<br />
                         肌へのダメージが少なく、肌トラブルが起こりにくいとされています。<br />
                         また、光脱毛は毛穴を引き締める効果があり、美肌に導きます。<br />
                     </FadeAndSlideScrollTriggerAnimation>
 
-                    <FadeAndSlideScrollTriggerAnimation delay={300} className="mt-4 sm:mt-8" tag="h3">
+                    <FadeAndSlideScrollTriggerAnimation delay={0.3} className="mt-4 sm:mt-8" >
                         カウンセリング
                     </FadeAndSlideScrollTriggerAnimation>
 
-                    <FadeAndSlideScrollTriggerAnimation delay={400} className="mt-1 sm:mt-2" tag="p">
+                    <FadeAndSlideScrollTriggerAnimation delay={0.4} className="mt-1 sm:mt-2">
                         初めて光脱毛を受けられる方は、事前のカウンセリングが必要です。<br />
                         カウンセリングでは、お客様の肌質や毛質を確認し、<br />
                         適切な施術プランをご提案いたします。<br />
                     </FadeAndSlideScrollTriggerAnimation>
-                    <FadeAndSlideScrollTriggerAnimation delay={400} className="mt-1 sm:mt-2" tag="p">
+                    <FadeAndSlideScrollTriggerAnimation delay={0.4} className="mt-1 sm:mt-2">
                         また、施術に関する注意事項やアフターケアについても詳しく説明いたします。<br />
                         施術回数や期間は個人差がありますので、カウンセリングでご相談ください。
                     </FadeAndSlideScrollTriggerAnimation>
