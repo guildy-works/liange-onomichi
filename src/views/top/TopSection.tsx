@@ -1,5 +1,5 @@
 import React from "react";
-import clover from "@/assets/images/clover.jpg";
+import clover from "@/assets/images/clover.png";
 import bed1 from "@/assets/images/bed1.jpg";
 import onomichi from "@/assets/images/onomichi.jpg";
 import liangePanel from "@/assets/images/liange_panel.jpg";
