@@ -2,50 +2,92 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Zen+Old+Mincho:wght@400;500;600;700&display=swap');
 
-@font-face {
-    font-family: "Amsterdam";
-    src: url("/Amsterdam_Four.woff");
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
 }
 
 body {
-    color: rgb(var(--foreground-rgb));
-    @apply text-size-p text-font1;
-    font-family: "Zen Old Mincho", serif;
+    @apply bg-ivory text-ink font-gothic antialiased;
+    font-feature-settings: "palt";
+    letter-spacing: 0.04em;
+    line-height: 1.9;
+    overflow-x: hidden;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    @apply font-mincho font-medium;
+    letter-spacing: 0.08em;
+}
 
-p,
-div {
-    @apply text-size-p;
+::selection {
+    @apply bg-sage-200 text-ink;
+}
+
+@layer components {
+    .container-x {
+        @apply mx-auto w-full max-w-content px-5 sm:px-8 lg:px-12;
+    }
+
+    .section-space {
+        @apply py-20 sm:py-28 lg:py-36;
+    }
+
+    .label-en {
+        @apply font-en italic text-sage-500 tracking-[0.18em];
+    }
+
+    .arch {
+        border-radius: 999px 999px 1.5rem 1.5rem;
+    }
+
+    .arch-full {
+        border-radius: 999px 999px 999px 999px;
+    }
+
+    .btn-primary {
+        @apply inline-flex items-center justify-center gap-2 rounded-full bg-sage-500 px-7 py-3.5 text-sm font-medium tracking-widest text-ivory-50 transition-all duration-300 hover:bg-sage-600 hover:shadow-soft;
+    }
+
+    .btn-instagram {
+        @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#f58529] via-[#dd2a7b] to-[#8134af] px-7 py-3.5 text-sm font-medium tracking-widest text-white shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:shadow-soft hover:brightness-110;
+    }
+
+    .btn-outline {
+        @apply inline-flex items-center justify-center gap-2 rounded-full border border-ink/25 px-7 py-3.5 text-sm font-medium tracking-widest text-ink transition-all duration-300 hover:border-sage-500 hover:text-sage-600;
+    }
+
+    .link-underline {
+        @apply relative;
+
+        &::after {
+            content: "";
+            @apply absolute -bottom-1 left-0 h-px w-full origin-right scale-x-0 bg-current transition-transform duration-300;
+        }
+
+        &:hover::after {
+            @apply origin-left scale-x-100;
+        }
+    }
 }
 
 @layer utilities {
     .text-balance {
         text-wrap: balance;
     }
-}
 
-.link {
-    font-size: 0.8rem;
-    position: relative;
-    display: inline-block;
-    text-decoration: none;
-}
+    .text-vertical {
+        writing-mode: vertical-rl;
+    }
 
-.active {
-    @apply pl-3;
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
 
-    &::before {
-        content: "";
-        position: absolute;
-        bottom: 2px;
-        left: 0;
-        width: 16px;
-        height: 1px;
-        background-color: black;
-        transform: rotate(-65deg);
-        transform-origin: left bottom;
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
 }

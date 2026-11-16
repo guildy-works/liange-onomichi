@@ -1,74 +1,99 @@
-import { LinkButton } from "@/components/LinkButton";
-import { SectionBar } from "@/components/SectionBar"
-import { FadeAndSlideScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/FadeAndSlideScrollTriggerAnimation";
-import { SkewScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/SkewScrollTriggerAnimation";
-import { TransitionImage } from "@/libs/ScrollTriggerAnimations/TransitionImage";
+'use client'
+
+import { PiCertificateLight } from "react-icons/pi";
 import img1 from "@/assets/images/img1.jpg";
 import img3 from "@/assets/images/img3.jpg";
-import { TitleType } from "@/components/Titles";
+import { TransitionImage } from "@/libs/ScrollTriggerAnimations/TransitionImage";
+import { Reveal, Stagger, StaggerItem } from "@/components/Reveal";
+import { SectionHeading } from "@/components/SectionHeading";
+
+const history = [
+    { year: "1997", text: "大手エステサロン TBC に入社。フェイシャル・ボディ・脱毛の施術を担当。" },
+    { year: "", text: "EA 上級認定エステティシャン／美容脱毛エステティシャンの資格を取得。" },
+    { year: "2014", text: "17年間勤めた TBC を退社。" },
+    { year: "2015", text: "尾道に「Liange 〜リアンジュ〜」をオープン。" },
+];
+
+const qualifications = ["EA 上級認定エステティシャン", "美容脱毛エステティシャン"];
 
 export const ProfileSection = () => {
-
     return (
-        <div className="w-full relative mt-12 sm:mt-24 md:mt-36 flex flex-col">
+        <section id="profile" className="section-space relative overflow-hidden bg-sage-50">
+            <div className="pointer-events-none absolute -right-24 top-10 -z-0 h-[26rem] w-[26rem] animate-blob bg-ivory-50/80 blur-2xl" />
 
-            {/* 背景パネル */}
-            <div className="w-svw sm:w-[70vw] absolute inset-0 bg-color2 -z-10" />
-
-            <div className="w-full max-w-screen-md mx-auto pt-12">
-                <SectionBar text="Profile" />
-
-                <div className="grid md:grid-cols-2 py-12 mx-auto gap-2">
-                    <div className="flex flex-col gap-4 sm:gap-8 p-8">
-                        <TitleType title="店長プロフィール" subTitle="Onomichi Liange" />
-
-                        <SkewScrollTriggerAnimation delay={0.1} tag="p" skewPanelClass="!bg-color2">
-                            1997年TBCに入社。<br />
-                            フェイシャル、ボディ、脱毛等の施術を行い、<br />
-                            EA上級認定エステティシャン<br />
-                            美容脱毛エステティシャンの資格を取得<br />
-                            2014年退社後2015年Liange〜リアンジュオープン致しました。
-                        </SkewScrollTriggerAnimation>
-
-                        <SkewScrollTriggerAnimation delay={0.2} tag="p" skewPanelClass="!bg-color2">
-                            2014年に退社後、
-                            2015年に「Liange〜リアンジュ」をオープン致しました。
-                        </SkewScrollTriggerAnimation>
-
-                        <SkewScrollTriggerAnimation delay={0.3} tag="p" skewPanelClass="!bg-color2">
-                            お客様1人1人に合った施術を行い安心価格で高品質なエステメニューを提供します。<br />
-                            皆様の日々の悩み、コンプレックスを教えてください…
-                        </SkewScrollTriggerAnimation>
-
-                        <SkewScrollTriggerAnimation delay={0.4} tag="p" skewPanelClass="!bg-color2">
-                            お客様の気持ちに寄り添い気軽にコースを受けて頂ける空間を<br />
-                            日々考え提供していく事をお約束いたします。
-                        </SkewScrollTriggerAnimation>
-
-                        <SkewScrollTriggerAnimation delay={0.5} tag="p" skewPanelClass="!bg-color2">
-                            是非一度Liangeで美と癒しのひと時をお過ごしください。<br />
-                            お待ちしております。
-                        </SkewScrollTriggerAnimation>
-
-                        <SkewScrollTriggerAnimation delay={0.6} tag="p" skewPanelClass="!bg-color2">
-                            1967年9月19日生まれ<br />
-                            O型<br />
-                            乙女座
-                        </SkewScrollTriggerAnimation>
-
-                        <SkewScrollTriggerAnimation delay={0.7} tag="p" skewPanelClass="!bg-color2">
-                            福山市立大門高等学校卒業後色々なお仕事を経験し…<br />
-                            1997年TBC入社<br />
-                            2015年 Liengeオープン
-                        </SkewScrollTriggerAnimation>
+            <div className="container-x relative">
+                <div className="grid items-start gap-14 lg:grid-cols-[1fr_1.15fr] lg:gap-20">
+                    {/* portrait */}
+                    <div className="relative mx-auto w-full max-w-sm lg:sticky lg:top-28 lg:max-w-none">
+                        <TransitionImage
+                            imageData={img3}
+                            alt="店長"
+                            parallaxSlideLength={26}
+                            className="arch aspect-[4/5] shadow-soft"
+                        />
+                        <Reveal delay={0.25} className="absolute -bottom-6 -right-3 w-[46%] sm:-right-6">
+                            <div className="overflow-hidden rounded-2xl border-4 border-ivory-50 shadow-card">
+                                <TransitionImage
+                                    imageData={img1}
+                                    alt="受賞歴"
+                                    parallaxSlideLength={14}
+                                    className="aspect-[4/3]"
+                                />
+                            </div>
+                        </Reveal>
                     </div>
-                    <div className="px-8 my-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-4 sm:gap-8">
-                        <TransitionImage alt="プロフィール" imageData={img3} className="rounded-lg" />
 
-                        <TransitionImage alt="受賞歴" imageData={img1} className="rounded-lg" />
+                    {/* text */}
+                    <div>
+                        <SectionHeading en="Profile" ja="店長ごあいさつ" />
+
+                        <Reveal delay={0.1} className="mt-8 space-y-5 text-sm leading-[2.1] text-ink-light sm:text-[15px]">
+                            <p>
+                                1997年に TBC に入社し、フェイシャル・ボディ・脱毛などの施術を17年間担当してまいりました。
+                                2014年に退社後、2015年に尾道で「Liange 〜リアンジュ〜」をオープンいたしました。
+                            </p>
+                            <p>
+                                お客様おひとりおひとりに合った施術で、安心価格で高品質なエステメニューをご提供します。
+                                皆様の日々のお悩みやコンプレックス、ぜひ私に教えてください。
+                            </p>
+                            <p>
+                                お客様のお気持ちに寄り添い、気軽にコースを受けていただける空間を日々考え、
+                                ご提供していくことをお約束いたします。ぜひ一度、Liange で美と癒しのひとときをお過ごしください。
+                            </p>
+                        </Reveal>
+
+                        <Reveal delay={0.2} className="mt-8 flex flex-wrap gap-2">
+                            {qualifications.map((q) => (
+                                <span key={q} className="inline-flex items-center gap-1.5 rounded-full bg-ivory-50 px-4 py-1.5 text-[11.5px] tracking-wider text-sage-700 shadow-card">
+                                    <PiCertificateLight className="h-4 w-4 text-sage-500" />
+                                    {q}
+                                </span>
+                            ))}
+                        </Reveal>
+
+                        <div className="mt-12">
+                            <p className="label-en text-base">History</p>
+                            <Stagger className="mt-5 border-l border-sage-200" stagger={0.1}>
+                                {history.map((h, i) => (
+                                    <StaggerItem key={i} className="relative pb-6 pl-8 last:pb-0">
+                                        <span className="absolute -left-[5px] top-2 h-[9px] w-[9px] rounded-full border-2 border-sage-400 bg-ivory" />
+                                        {h.year && <span className="font-en text-xl italic tracking-wider text-sage-600">{h.year}</span>}
+                                        <p className={`text-[13.5px] leading-relaxed text-ink-light ${h.year ? "mt-0.5" : ""}`}>{h.text}</p>
+                                    </StaggerItem>
+                                ))}
+                            </Stagger>
+                        </div>
+
+                        <Reveal delay={0.15} className="mt-10 rounded-2xl bg-ivory-50/80 p-5 text-[12.5px] leading-relaxed text-ink-light">
+                            <p className="label-en text-sm">Personal</p>
+                            <p className="mt-2">
+                                1967年9月19日生まれ ／ O型 ／ 乙女座<br />
+                                福山市立大門高等学校卒業後、さまざまな仕事を経験し、1997年 TBC 入社。
+                            </p>
+                        </Reveal>
                     </div>
                 </div>
             </div>
-        </div>
-    )
-}
+        </section>
+    );
+};

@@ -1,8 +1,9 @@
+'use client'
+
 import clsx from "clsx";
-import type { CSSProperties, ReactNode } from "react";
+import type { CSSProperties } from "react";
 import React from "react";
-import css from "./AnimatedImage.module.scss";
-import { motion, useInView, useMotionValueEvent, useScroll } from "motion/react";
+import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import Image from "next-export-optimize-images/picture";
 import { StaticImageData } from "next/image";
 

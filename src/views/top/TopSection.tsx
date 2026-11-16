@@ -1,93 +1,128 @@
-import React from "react";
-import clover from "@/assets/images/clover.png";
-import bed1 from "@/assets/images/bed1.jpg";
-import onomichi from "@/assets/images/onomichi.jpg";
-import liangePanel from "@/assets/images/liange_panel.jpg";
-import img5 from "@/assets/images/img5.jpg";
-import img11 from "@/assets/images/img11.jpg";
-import { SkewScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/SkewScrollTriggerAnimation";
-import { TransitionImage } from "@/libs/ScrollTriggerAnimations/TransitionImage";
-import Image from 'next-export-optimize-images/picture';
+'use client'
+
+import { motion } from "motion/react";
+import Image from "next-export-optimize-images/picture";
+import { PiArrowDownLight, PiInstagramLogoLight } from "react-icons/pi";
+import room2 from "@/assets/images/room2.jpg";
+import hurb from "@/assets/images/hurb.jpg";
+import logo from "@/assets/images/logo.png";
+import { site } from "@/data/site";
+
+const ease = [0.22, 1, 0.36, 1] as const;
+const base = 1.2;
+
+const fadeUp = (delay: number) => ({
+    initial: { opacity: 0, y: 24 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.9, delay: base + delay, ease },
+});
+
+const features = ["女性専用", "大手サロン17年の実績", "リーズナブル価格"];
 
 export const TopSection = () => {
     return (
-        <div className="flex w-full max-w-screen-xl">
-            <div className=" my-auto md:px-8">
-                <p className="[writing-mode:vertical-rl] w-6 border-l-2 border-current font-jost">
-                    ONOMICHI.
-                </p>
+        <section className="relative overflow-hidden pt-24 sm:pt-28 lg:pt-0">
+            {/* soft background */}
+            <div className="pointer-events-none absolute inset-0 -z-10">
+                <div className="absolute -left-32 top-24 h-[28rem] w-[28rem] rounded-full bg-blush-100/70 blur-3xl" />
+                <div className="absolute right-[-10%] top-[-10%] h-[32rem] w-[32rem] rounded-full bg-sage-100/80 blur-3xl" />
             </div>
 
-            {/* Content */}
-            <div className="flex-grow">
-                <div className="h-full flex flex-col">
-                    {/* description */}
+            <div className="container-x grid items-center gap-10 pb-16 sm:gap-12 lg:min-h-svh lg:grid-cols-[1.05fr_1fr] lg:gap-8 lg:pb-0 lg:pt-24">
+                {/* copy */}
+                <div className="relative order-2 lg:order-1">
+                    <motion.p {...fadeUp(0)} className="flex items-center gap-3 text-[10.5px] tracking-[0.22em] text-sage-600 sm:text-xs sm:tracking-[0.35em]">
+                        <span className="h-px w-6 shrink-0 bg-sage-400 sm:w-8" />
+                        {site.tagline}
+                    </motion.p>
 
-                    <div className="mt-1 sm:mt-2 md:mt-3">
-                        <div className="flex fitems-center gap-3 mt-16">
-                            <div>
-                                <h2 className="ml-2 sm:ml-3 md:ml-6 select-none text-size3">女性専用 脱毛・エステティックサロン</h2>
-                                <h1 className="ml-2 sm:ml-3 md:ml-6 select-none mt-3 text-[2rem] font-asterdam">
-                                    <span className="text-color3">L</span>
-                                    <span className="ml-2">iange</span>
-                                </h1>
-                            </div>
-                            <Image className="w-[100px] md:w-[120px] filter hue-rotate-[27deg] grayscale-[0.28]" src={clover} alt="clover" />
-                        </div>
+                    <motion.h1 {...fadeUp(0.12)} className="mt-6 text-[1.9rem]/[1.55] text-ink sm:text-[2.5rem]/[1.5] lg:text-[2.9rem]/[1.5]">
+                        がんばる毎日に、<br />
+                        <span className="relative inline-block">
+                            ごほうび
+                            <span className="absolute bottom-1 left-0 -z-10 h-3 w-full bg-blush-100 sm:h-4" />
+                        </span>
+                        の<br />
+                        ひとときを。
+                    </motion.h1>
 
-                        <div className="max-w-[680px] w-full mt-8 md:mt-32">
-                            <SkewScrollTriggerAnimation delay={2}>
-                                <h2 className="text-size3">脱毛・エステティックサロン</h2>
-                            </SkewScrollTriggerAnimation>
-                            <SkewScrollTriggerAnimation delay={2} className="mt-2">
-                                <span className="text-title2 font-jost py-1">Liange</span>
-                                <span className="text-title4 py-1 ml-3">- リアンジュ -</span>
-                            </SkewScrollTriggerAnimation>
-                        </div>
+                    <motion.p {...fadeUp(0.24)} className="mt-7 max-w-md text-sm leading-[2.1] text-ink-light sm:text-[15px]">
+                        大手サロンで17年間培った経験と技術を、リーズナブルな価格で。
+                        尾道の小さなプライベートサロンで、心と身体をゆっくりほどく時間をお過ごしください。
+                    </motion.p>
 
-                        <div className="mt-4 sm:mt-8 md:mt-6 max-w-[680px] w-full">
-                            <SkewScrollTriggerAnimation delay={2.1} className="w-full" tag="p">
-                                大手サロンで17年間施術した実績と経験を活かし、<br />
-                                かつリーズナブルな価格でメニューを提供するエステサロンを目指しました。<br />
-                            </SkewScrollTriggerAnimation>
-                        </div>
-
-                        <div className="mt-2 md:mt-4 max-w-[680px] w-full">
-                            <SkewScrollTriggerAnimation delay={2.2} className="w-full" tag="p">
-                                エステが高いと諦めていた方、<br />
-                                日頃の疲れを癒したい方、<br />
-                                綺麗になりたい方に寄り添ったコースを提供いたします。<br />
-                            </SkewScrollTriggerAnimation>
-                        </div>
-
-                        <div className="mt-2 md:mt-4 max-w-[680px] w-full">
-                            <SkewScrollTriggerAnimation delay={2.3} className="w-full" tag="p">
-                                アットホームな空間でリラックスしながら、美と健康を追求するサロン作りを目指してます。<br />
-                                是非一度ご来店ください。
-                            </SkewScrollTriggerAnimation>
-                        </div>
-
-                    </div>
-
-                    {/* images */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 w-full gap-3 md:gap-12 mx-auto mt-16">
-                        {[onomichi, img5, liangePanel, img11].map((img, index) => (
-                            <TransitionImage key={index}
-                                className=" rounded-sm"
-                                imageData={img}
-                                alt={`Image ${index + 1}`}
-                            />
+                    <motion.ul {...fadeUp(0.34)} className="mt-7 flex flex-wrap gap-2">
+                        {features.map((f) => (
+                            <li key={f} className="rounded-full border border-sage-200 bg-ivory-50/70 px-4 py-1.5 text-[11px] tracking-[0.15em] text-sage-700 backdrop-blur">
+                                {f}
+                            </li>
                         ))}
-                    </div>
-                </div>
-            </div>
+                    </motion.ul>
 
-            {/* Vertical Line */}
-            <div className="pl-4 md:pl-12 pt-8 flex flex-col z-10">
-                <div className="flex-grow border-l-2 border-current flex items-start">
-                    <h6 className="ml-1 my-auto [writing-mode:vertical-rl] w-6">Liange</h6>
+                    <motion.div {...fadeUp(0.46)} className="mt-9 flex flex-wrap items-center gap-4">
+                        <a href={site.instagram} target="_blank" rel="noopener noreferrer" className="btn-instagram">
+                            <PiInstagramLogoLight className="h-4 w-4" />
+                            ご予約・お問い合わせ
+                        </a>
+                        <a href="#menu" className="btn-outline">
+                            メニューを見る
+                        </a>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: base + 1, duration: 1 }}
+                        className="mt-14 hidden items-center gap-4 text-[10px] tracking-[0.35em] text-ink-muted lg:flex"
+                    >
+                        <span>SCROLL</span>
+                        <span className="relative h-px w-16 overflow-hidden bg-ink/10">
+                            <span className="absolute inset-0 origin-left animate-scrollLine bg-sage-400" />
+                        </span>
+                        <PiArrowDownLight className="h-3.5 w-3.5 animate-float" />
+                    </motion.div>
+                </div>
+
+                {/* visual */}
+                <div className="relative order-1 mx-auto w-full max-w-[440px] sm:max-w-[520px] lg:order-2 lg:max-w-none">
+                    <motion.div
+                        initial={{ opacity: 0, y: 40, scale: 0.98 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        transition={{ duration: 1.2, delay: base - 0.1, ease }}
+                        className="arch relative ml-auto aspect-[4/5] w-[78%] overflow-hidden shadow-soft sm:w-[72%] lg:w-[80%]"
+                    >
+                        <Image src={room2} alt="Liange の施術ルーム" className="h-full w-full object-cover" loading="eager" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-ink/10 via-transparent to-transparent" />
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1.1, delay: base + 0.35, ease }}
+                        className="absolute -bottom-6 left-0 w-[44%] overflow-hidden rounded-2xl shadow-card sm:-bottom-8 lg:left-4 lg:w-[40%]"
+                    >
+                        <Image src={hurb} alt="ハーブ" className="aspect-square h-full w-full object-cover" loading="eager" />
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.6, rotate: -20 }}
+                        animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                        transition={{ duration: 1, delay: base + 0.6, ease }}
+                        className="absolute -top-4 right-2 h-16 w-16 animate-float sm:h-20 sm:w-20 lg:right-6"
+                    >
+                        <Image src={logo} alt="" className="h-full w-full object-contain drop-shadow-sm" loading="eager" />
+                    </motion.div>
+
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1, delay: base + 0.8 }}
+                        className="text-vertical absolute top-1/2 hidden -translate-y-1/2 whitespace-nowrap font-en text-sm italic tracking-[0.35em] text-ink-muted lg:-right-10 lg:block xl:-right-14"
+                    >
+                        Beauty &amp; Relaxation — Onomichi
+                    </motion.p>
                 </div>
             </div>
-        </div>
-    )
-}
+        </section>
+    );
+};

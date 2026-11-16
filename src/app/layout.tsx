@@ -1,16 +1,25 @@
-"use client";
-
 import type { Metadata } from "next";
-import { Noto_Sans_JP } from "next/font/google";
-import { Jost } from "next/font/google";
+import Script from "next/script";
 import "./globals.scss";
-import Link from "next/link";
 import { Header } from "./Header";
-import { CurtainContainer } from "@/components/Curtain";
-import Head from "next/head";
-import Script from 'next/script'; 
+import { Footer } from "@/components/Footer";
+import { FloatingCta } from "@/components/FloatingCta";
+import { IntroLoader } from "@/components/IntroLoader";
 
-const gaId  = "G-XNC8SQYTYW"
+const gaId = "G-XNC8SQYTYW";
+
+export const metadata: Metadata = {
+    title: "Liange - リアンジュ | 尾道の女性専用 脱毛・エステティックサロン",
+    description:
+        "広島県尾道市にある女性専用の脱毛・エステティックサロン Liange（リアンジュ）。大手サロン17年の経験を活かし、リーズナブルな価格でフェイシャル・ボディ・光脱毛をご提供。日頃の疲れを癒し、内側から輝く美しさへ。",
+    keywords: ["脱毛", "尾道", "エステ", "低価格", "安い", "全身脱毛", "光脱毛", "フェイシャル", "リンパマッサージ", "女性専用"],
+    openGraph: {
+        title: "Liange - リアンジュ | 尾道の女性専用 脱毛・エステティックサロン",
+        description: "がんばる毎日に、ごほうびのひとときを。尾道のアットホームなプライベートサロン。",
+        locale: "ja_JP",
+        type: "website",
+    },
+};
 
 export default function RootLayout({
     children,
@@ -20,16 +29,12 @@ export default function RootLayout({
     return (
         <html lang="ja">
             <head>
-                <title>Liange - リアンジュ 尾道</title>
-                <meta name="description" content="広島県尾道市にある女性専用の脱毛・エステティックサロンサロンです。" />
-                <meta name="keywords" content="脱毛,尾道,エステ,低価格,安い,全身脱毛,光脱毛" />
-
                 <Script
                     src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-                    strategy='afterInteractive'
+                    strategy="afterInteractive"
                     async
                 />
-                <Script id='google-analytics' strategy='afterInteractive'>
+                <Script id="google-analytics" strategy="afterInteractive">
                     {`
                         window.dataLayer = window.dataLayer || [];
                         function gtag(){dataLayer.push(arguments);}
@@ -38,26 +43,12 @@ export default function RootLayout({
                     `}
                 </Script>
             </head>
-            <body className="bg-white">
-                <div className="flex min-h-screen flex-col h-svh relative">
-                    <CurtainContainer open colors={["#468189", "#77aca2", "#9dbebb", "#c4cdc1", "#f4eace", "#dee1dd"]}>
-                        <Header />
-                        <main className="flex flex-col items-center">
-                            {children}
-                        </main>
-
-                        <footer className="bg-color2 min-h-96 flex flex-col justify-center">
-
-                            {/* コピーライト */}
-                            <div>
-                                <p className="text-center text-gray-600">
-                                    © {new Date().getFullYear()} Liange Onomichi. All rights reserved.
-                                </p>
-                            </div>
-
-                        </footer>
-                    </CurtainContainer>
-                </div>
+            <body>
+                <IntroLoader />
+                <Header />
+                <main id="top">{children}</main>
+                <Footer />
+                <FloatingCta />
             </body>
         </html>
     );

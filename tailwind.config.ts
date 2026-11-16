@@ -1,49 +1,90 @@
 import type { Config } from "tailwindcss";
-import colors from 'tailwindcss/colors';
-import theme from 'tailwindcss/defaultTheme';
 
 const config: Config = {
     content: [
         "./src/views/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+        "./src/data/**/*.{js,ts,jsx,tsx,mdx}",
     ],
-    safelist: ["overflow-hidden","size-full"],
     theme: {
-        fontSize: {
-            ...theme.fontSize,
-            "navigation": ["min(3.4vw, 0.98rem)", { letterSpacing: "0.1rem", fontWeight: 500 }],
-            "size-p-wide": ["min(3.2vw, 0.82rem)", { letterSpacing: "0.08rem", lineHeight: "1.5rem", fontWeight: "700", }],
-            "size-p": ["min(3.2vw, 0.9rem)", { letterSpacing: "0.01rem", lineHeight: "1.4rem", fontWeight: "700" }],
-            size3: ["min(3vw, 0.72rem)", { letterSpacing: "0.04rem", lineHeight: "1.4rem", fontWeight: "700" }],
-            size2: ["min(3.2vw, 0.9rem)", { letterSpacing: "0.04rem", lineHeight: "1.2rem", fontWeight: "700" }],
-            size1: ["min(3.8vw, 1.05rem)", { letterSpacing: "0.04rem", lineHeight: "1.2rem", fontWeight: "700" }],
-            title4: ['min(4.2vw, 1.1rem)', { letterSpacing: "0rem", lineHeight: "1.8rem", fontWeight: "500" }],
-            title3: ['min(4.6vw, 1.8rem)', { letterSpacing: "0rem", lineHeight: "2rem", fontWeight: "500" }],
-            title2: ['min(5.8vw, 2.2rem)', { letterSpacing: "0rem", lineHeight: "2.5rem", fontWeight: "500" }],
-            title1: ['min(6.5vw, 2.8rem)', { letterSpacing: "0rem", lineHeight: "3.8rem", fontWeight: "500" }],
-        },
-        screens: {
-            sm: '600px',
-            md: '1240px',
-            lg: '1560px',
-            xl: '1920px',
-        },
-        fontFamily: {
-            asterdam: ['Amsterdam', 'sans-serif'],
-            jost: ['Jost', 'sans-serif'],
-        },
-        colors: {
-            ...colors,
-            color3: '#85a48c',
-            color1: '#f3e8e8',
-            color2: '#f6f0e8',
-            white: '#faf8f6',
-            font1: '#1a1921',
-            font2: 'rgb(223 150 150)',
-            font3: '#c07a7a',
-            grey1: '#f7f2ec',
-            grey2: '#bba3a3',
+        extend: {
+            colors: {
+                ivory: {
+                    DEFAULT: "#fbf8f4",
+                    50: "#fdfcfa",
+                    100: "#f6f1ea",
+                    200: "#efe7dd",
+                    300: "#e4d9cb",
+                },
+                sage: {
+                    50: "#f2f7f2",
+                    100: "#e3ede4",
+                    200: "#c9dbcc",
+                    300: "#a9c4ae",
+                    400: "#85a48c",
+                    500: "#6b8d72",
+                    600: "#55735b",
+                    700: "#445c49",
+                    800: "#34473a",
+                },
+                blush: {
+                    50: "#fcf5f3",
+                    100: "#f7e9e5",
+                    200: "#eed3cc",
+                    300: "#e3b8ae",
+                    400: "#d59d92",
+                    500: "#c58176",
+                },
+                gold: {
+                    DEFAULT: "#c6ab78",
+                    light: "#e8dcc2",
+                },
+                ink: {
+                    DEFAULT: "#3a3835",
+                    light: "#6f6a64",
+                    muted: "#9a948d",
+                },
+            },
+            fontFamily: {
+                mincho: ['"Zen Old Mincho"', "serif"],
+                gothic: ['"Zen Kaku Gothic New"', "sans-serif"],
+                en: ['"Cormorant Garamond"', "serif"],
+                jost: ["Jost", "sans-serif"],
+            },
+            maxWidth: {
+                content: "72rem",
+            },
+            boxShadow: {
+                soft: "0 18px 50px -20px rgba(58, 56, 53, 0.18)",
+                card: "0 8px 30px -14px rgba(58, 56, 53, 0.16)",
+            },
+            keyframes: {
+                float: {
+                    "0%, 100%": { transform: "translateY(0)" },
+                    "50%": { transform: "translateY(-10px)" },
+                },
+                marquee: {
+                    "0%": { transform: "translateX(0)" },
+                    "100%": { transform: "translateX(-50%)" },
+                },
+                scrollLine: {
+                    "0%": { transform: "scaleX(0)", transformOrigin: "left" },
+                    "45%": { transform: "scaleX(1)", transformOrigin: "left" },
+                    "55%": { transform: "scaleX(1)", transformOrigin: "right" },
+                    "100%": { transform: "scaleX(0)", transformOrigin: "right" },
+                },
+                blob: {
+                    "0%, 100%": { borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%" },
+                    "50%": { borderRadius: "30% 60% 70% 40% / 50% 60% 30% 60%" },
+                },
+            },
+            animation: {
+                float: "float 7s ease-in-out infinite",
+                marquee: "marquee 45s linear infinite",
+                scrollLine: "scrollLine 2.4s ease-in-out infinite",
+                blob: "blob 14s ease-in-out infinite",
+            },
         },
     },
     plugins: [],
